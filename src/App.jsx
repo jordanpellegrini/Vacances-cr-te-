@@ -341,9 +341,8 @@ export default function App() {
         </div>
       </div>
 
-      <div style={{ position: "fixed", bottom: 0, left: 0, right: 0, background: "rgba(255,255,255,0.92)", backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)", borderTop: "1px solid #ddd8d0", padding: "10px 12px", display: "flex", justifyContent: "center", gap: 6, zIndex: 80 }}>
-        <BBtn primary onClick={() => showToast("✅ Sauvegarde automatique !")}>💾 Auto-save</BBtn>
-        <BBtn danger onClick={clearDay}>🗑️ Vider</BBtn>
+      <div style={{ position: "fixed", bottom: 0, left: 0, right: 0, background: "rgba(255,255,255,0.92)", backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)", borderTop: "1px solid #ddd8d0", padding: "10px 12px", zIndex: 80 }}>
+        <button onClick={() => { loadAll(); showToast("✅ Sauvegardé !"); }} style={{ width: "100%", padding: "14px", borderRadius: 12, border: "none", background: "#1a7a6d", color: "#fff", fontSize: "0.92rem", fontWeight: 700, cursor: "pointer", letterSpacing: 0.5 }}>💾 Sauvegarder</button>
       </div>
 
       {lightbox && (
